@@ -1,0 +1,28 @@
+import turtle
+t = turtle.Turtle()
+t.shape('turtle')
+import turtle as trtl
+r1=int(input())
+r2=int(input())
+x1=int(input())
+x2=int(input())
+y1=int(input())
+y2=int(input())
+trtl.up()
+trtl.goto(x1-r1,y1-r1)
+trtl.down()
+trtl.circle(r1)
+trtl.up()
+trtl.goto(x2-r2,y2-r2)
+trtl.down()
+trtl.circle(r2)
+if abs(x1-x2)==(r1+r2) and abs(y1-y2)==(r1+r2):
+  print('окружности имеют внешнее касание')
+elif (abs(x1-x2)<(r1+r2) and y1==y2) or (abs(y1-y2)<(r1+r2) and x1==x2):
+  print('окружности пересекаются')
+elif (x1<x2 and y1<y2 and r1<r2 and (x1+r1==x2+r2)) or (x2<x2 and y2<y1 and r2<r1 and (x1+r1==x2+r2)):
+  print('окружности имеют внутреннее касание')
+elif (x1<x2 and y1<y2 and r1<r2 and (x1+r1!=x2+r2)) or (x2<x2 and y2<y1 and r2<r1 and (x1+r1!=x2+r2)):
+  print('окружности лежат одна в другой не касаясь')
+else:
+  print('окружности лежат одна вне другой не касаясь')
