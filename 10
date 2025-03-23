@@ -1,4 +1,6 @@
-mport turtle as trtl
+#a-длина первого, b-ширина первого, c-длина второго, d-ширина второго
+import math
+import turtle as trtl
 a=int(input())
 b=int(input())
 c=int(input())
@@ -29,3 +31,8 @@ trtl.forward(c)
 trtl.left(90)
 trtl.forward(d)
 trtl.right(90)
+xm1=x1+a/2
+ym1=y1+b/2
+xm2=x2+c/2
+ym2=y2+d/2
+distance=math.sqrt((xm1-xm2)**2+(ym1-ym2)**2)
