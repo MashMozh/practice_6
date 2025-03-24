@@ -1,4 +1,8 @@
 quantity=int(input())
+if quantity<100:
+  lst=quantity%10
+elif 1000>quantity>100:
+    lst=quantity%100
 if quantity<=5 and quantity%5==0 or quantity<=5 and quantity%7==0:
     print("да")
 elif quantity>7 and lst==7 or quantity>7 and lst==2 and (quantity-7)%5==0:
